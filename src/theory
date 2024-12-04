@@ -1,0 +1,52 @@
+data structure:
+stack / queue/linked list: linear data structure which follows a particular insertion order place the new element besides the last element
+we can create an array to support all the linear data structure mentioned above
+stack: stack is alinear ds which follows insertion order but when we require the data it supplies dat in a LIFO format - Last In Last OUT
+that means we are bound to get the end value always
+
+eg of stack :
+Bios ->OS->UI->application
+
+Linked List: it is a way of storing data which stores the reference of next object;
+
+
+HashMaps: data structure to store in key value pairs
+hashmaps are weirdly structure linked list : where it have 3 core fundamentals :
+hashing function ,bucket function, resize
+
+Load factor: all dynamic memory data structure uses something : load factor : it triggers when we reach a certain amount of data in a given scenario
+when it triggers it resizes the data structure by creating a ds double the size of original -> migrate all the data to that ds and then sekf destroy the old ds
+
+load factor of array?
+we have created an arraylist : so we haven't or we generally don't give any memory limit to the ds
+how does it creates dynamically?
+load factor = 0.75
+so when the array gets filled 75% if triggers the new array creation itself so new array of size 20 is created
+
+
+so 10*7.5-> 7 (int)
+create another array whose reference will be same : copy all the elements of the array
+to the new array and the old array will be flushed
+
+for size 20 (array)
+load factor will be 0.75*20=15
+
+for size 40 (array) its 30 i.e at 30th it will roll back
+
+new array of size 20
+
+bucket and hashing : hashing : it is mathematically function which works a value to create index - each element of the array used in hashmap is called a bucket
+and each bucket have an index value which is based upon the calculation of hashing of key -> if there is a conflict of keys pointing to same index it is stored as alinked list
+
+key value: key have same / duplicate key
+1->hi - index element at that index the value is store
+1- hi
+hashmap creates an array and it uses the keys hash values as the index for the next value
+hashmap<1,hello> 1-> hashing function and created a index -> 5 hello will be stored
+
+
+what is <5,heylo> after hashing it creates the same index value
+5 -> conflict->
+
+how the load factor kicks : it kicks when no. of elements  reaches 75% of number buckets
+
